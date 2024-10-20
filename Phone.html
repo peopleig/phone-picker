@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Picker - Phones</title>
+    <link rel="stylesheet" href="StylesPhone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>PHONE PICKER</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Phone.html" class="active">Phones</a></li>
+                <li><a href="Laptop.html">Laptops</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Find Your Perfect Phone</h2>
+        <form id="phone-preferences-form">
+            <div class="form-group budget-inputs">
+                <div class="budget-input">
+                    <label for="min-budget">Minimum Budget (₹):</label>
+                    <input type="number" id="min-budget" name="min-budget" min="2000" max="400000" value="2000">
+                </div>
+                <div class="budget-input">
+                    <label for="max-budget">Maximum Budget (₹):</label>
+                    <input type="number" id="max-budget" name="max-budget" min="2000" max="400000" value="400000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Rank the following priorities from 1 (most important) to 4 (least important):</label>
+                <div class="priority-ranking">
+                    <div class="priority-item">
+                        <span>Gaming</span>
+                        <input type="number" id="priority-gaming" min="1" max="4" required>
+                    </div>
+                    <div class="priority-item">
+                        <span>Photography</span>
+                        <input type="number" id="priority-photography" min="1" max="4" required>
+                    </div>
+                    <div class="priority-item">
+                        <span>Browsing</span>
+                        <input type="number" id="priority-browsing" min="1" max="4" required>
+                    </div>
+                    <div class="priority-item">
+                        <span>Storage</span>
+                        <input type="number" id="priority-storage" min="1" max="4" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="find-phones">Find Phones</button>
+        </form>
+        <section id="phone-results" class="phone-grid">
+            <!-- Phone results willbe dynamically inserted here --> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Phone Picker. All rights reserved.</p>
+    </footer>
+    <!-- <script type="module" src="Phone.js" ></script> -->
+    <script src="SpecsDatabase.js"></script>
+</body>
+</html>
